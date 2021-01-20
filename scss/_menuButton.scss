@@ -1,7 +1,7 @@
 .button_container {
     position: fixed;
-    top: 5%;
-    right: 2%;
+    top: 3%;
+    right: 9%;
     height: 27px;
     width: 35px;
     cursor: pointer;
@@ -14,7 +14,7 @@
   
   }
   #toggleBtn span {
-      background-color: #0a1031;
+      background-color: #ebe0e0;
       width: 2rem;
       height: 0.2rem;
       margin: 0.26rem 0;
@@ -25,6 +25,7 @@
   }
   .active span:nth-child(1) {
       transform: rotate(45deg) translateY(-8px);
+    
     }
     
   .active span:nth-child(2) {

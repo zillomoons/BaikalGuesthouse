@@ -2,7 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: $fontBody;
 }
 body {
-    background: #F5F5F5;
+    background: #e7dddd;
+    min-height: 200vh;
+    
 }

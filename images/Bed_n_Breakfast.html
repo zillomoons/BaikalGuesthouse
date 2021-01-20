@@ -1,38 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+<!-- saved from url=(0023)http://127.0.0.1:5500/# -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Potta+One&family=Raleway:wght@600&family=Roboto&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="scss/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
+    <link href="./Bed_n_Breakfast_files/css2" rel="stylesheet">
+    <link rel="stylesheet" href="./Bed_n_Breakfast_files/styles.css">
     <title>Bed_n_Breakfast</title>
 </head>
 
 <body>
     <header>
-
-        <a href="#" class="logo">Baikal</a>
-        <div class="button_container" id="toggleBtn">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <div class="overlay" id="overlay">
-            <div class="overlay_menu">
-                <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Rooms</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
+        <nav class="nav">
+            <a href="http://127.0.0.1:5500/#"><img src="./Bed_n_Breakfast_files/logo.jpg" alt="logo lake" id="logo"></a>
+            <div class="button_container" id="toggleBtn">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-        </div>
+            <div class="overlay" id="overlay">
+                <div class="overlay_menu">
+                    <ul>
+                        <li><a href="http://127.0.0.1:5500/#">About</a></li>
+                        <li><a href="http://127.0.0.1:5500/#">Rooms</a></li>
+                        <li><a href="http://127.0.0.1:5500/#">Services</a></li>
+                        <li><a href="http://127.0.0.1:5500/#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
     </header>
-    <section class="banner"></section>
     <main>
         <section>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque blanditiis praesentium maxime corporis
@@ -67,7 +65,44 @@
                 asperiores blanditiis natus nemo!</p>
         </section>
     </main>
-    <script src="app.js"></script>
-</body>
+    <script src="./Bed_n_Breakfast_files/app.js.download"></script>
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
 
-</html>
+</body></html>
