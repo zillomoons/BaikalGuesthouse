@@ -1,8 +1,17 @@
 const menuBtn = document.getElementById('toggleBtn');
-const mobileMenu = document.getElementById('overlay');
+const menuOverlay = document.querySelector('.menu_container');
+
 
 menuBtn.addEventListener('click', function () {
-    mobileMenu.classList.toggle('open');
+    menuOverlay.classList.toggle('open');
     menuBtn.classList.toggle('active');
 
 })
+function checkMenu() {
+    if (visualViewport.width > 640 && menuOverlay.classList.contains('open')) {
+        menuOverlay.classList.remove('open');
+        menuBtn.classList.remove('active');
+    }
+}
+window.addEventListener('resize', checkMenu);
+
