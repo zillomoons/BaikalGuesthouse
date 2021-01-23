@@ -21,5 +21,11 @@ window.addEventListener('resize', checkMenu);
 window.addEventListener('scroll', function () {
     const header = document.querySelector('header');
     header.classList.toggle('sticky', window.scrollY > 0);
+    if (window.scrollY > 0) {
+        menuOverlay.style.cssText = 'top: 0%';
+    } else {
+        menuOverlay.style.cssText = 'top: 3%';
+    }
+
 })
 
