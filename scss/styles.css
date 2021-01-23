@@ -224,6 +224,25 @@ header .logo:hover {
   color: #ffffff;
 }
 
+@media (min-width: 640px) {
+  .banner {
+    height: 50vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .booking-row {
   position: absolute;
   bottom: 0%;
@@ -250,6 +269,34 @@ header .logo:hover {
   gap: 0.5em;
 }
 
+@media (min-width: 640px) {
+  #booking-form {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  #booking-form {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .booking_input {
   background: rgba(255, 255, 255, 0.1);
   min-width: 100%;
@@ -259,34 +306,51 @@ header .logo:hover {
   font-size: 0.8em;
   border: none;
   text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+}
+
+@media (min-width: 640px) {
+  .booking_input {
+    min-width: 30%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .booking_input {
+    min-width: 20%;
+  }
+}
+
+@media (min-width: 640px) {
+  .date {
+    min-width: 19.375em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .date {
+    min-width: 20%;
+  }
 }
 
 ::-webkit-input-placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #ffffff;
   opacity: 1;
-  /* Firefox */
 }
 
 :-ms-input-placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #ffffff;
   opacity: 1;
-  /* Firefox */
 }
 
 ::-ms-input-placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #ffffff;
   opacity: 1;
-  /* Firefox */
 }
 
 ::placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #ffffff;
   opacity: 1;
-  /* Firefox */
 }
 
 option {
@@ -296,6 +360,7 @@ option {
 #cta {
   background-color: #d90429;
   text-align: center;
+  border: none;
 }
 
 h1 {
@@ -304,5 +369,12 @@ h1 {
   font-weight: 100;
   padding: 2.3em 1em 0;
   text-align: center;
+}
+
+@media (min-width: 640px) {
+  h1 {
+    font-size: 3em;
+    padding: 0;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
