@@ -56,15 +56,19 @@ header {
 
 header .logo {
   position: relative;
-  font-family: "Caveat", cursive;
-  font-weight: 700;
+  font-family: "Potta One", cursive;
   color: #2d314d;
   text-decoration: none;
   font-size: 0.75em;
   text-transform: uppercase;
   letter-spacing: 2px;
+  cursor: pointer;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+
+header .logo:hover {
+  opacity: 0.7;
 }
 
 @media (min-width: 640px) {
@@ -73,13 +77,9 @@ header .logo {
   }
 }
 
-header .logo:hover {
-  opacity: 0.7;
-}
-
 .menu_container {
   position: fixed;
-  width: 100%;
+  width: 80%;
   right: 0%;
   top: 0%;
   visibility: hidden;
@@ -89,6 +89,7 @@ header .logo:hover {
 }
 
 .menu_container.open {
+  width: 100%;
   visibility: visible;
   opacity: 1;
   -webkit-transition: visibility 0s linear 0s, opacity 300ms;
@@ -99,6 +100,7 @@ header .logo:hover {
 
 @media (min-width: 1024px) {
   .menu_container {
+    top: 3%;
     visibility: visible;
     opacity: 1;
     -webkit-transition: visibility 0s;
@@ -138,7 +140,7 @@ header .logo:hover {
   position: relative;
   display: block;
   text-decoration: none;
-  color: #9698a6;
+  color: #2d314d;
   letter-spacing: 2px;
   font-family: "Raleway", sans-serif;
   -webkit-transition: all 0.3s ease-in-out;
@@ -146,7 +148,7 @@ header .logo:hover {
 }
 
 .menu_container ul li a:hover {
-  color: #2d314d;
+  opacity: 0.7;
 }
 
 .button_container {
@@ -300,13 +302,18 @@ header .logo:hover {
 .booking_input {
   background: rgba(255, 255, 255, 0.1);
   min-width: 100%;
-  border-radius: 8px;
+  border-radius: 5px;
   padding: 0.3em 1em;
   color: #ffffff;
   font-size: 0.8em;
   border: none;
   text-align: left;
   border: 1px solid rgba(255, 255, 255, 0.75);
+  cursor: pointer;
+}
+
+.booking_input:hover {
+  background: rgba(255, 255, 255, 0.5);
 }
 
 @media (min-width: 640px) {
@@ -323,7 +330,7 @@ header .logo:hover {
 
 @media (min-width: 640px) {
   .date {
-    min-width: 19.375em;
+    min-width: 46%;
   }
 }
 
@@ -359,8 +366,15 @@ option {
 
 #cta {
   background-color: #d90429;
+  border: #d90429;
   text-align: center;
   border: none;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+#cta:hover {
+  background-color: #c00a28;
 }
 
 h1 {
