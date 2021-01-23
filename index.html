@@ -36,33 +36,29 @@
             <h1>Enjoy nature with family</h1>
             <div class="booking-row">
                 <form action="/somewhere" id="booking-form">
-                    <label for="arrival_date">
-                        <input class="booking_input" id="arrival_date" name="arrival_date" type="text"
-                            onfocus="(this.type='date')" placeholder="Arrival Date">
-                    </label>
-                    <label for="departure_date">
-                        <input class="booking_input" id="departure_date" name="departure_date" type="text"
-                            onfocus="(this.type='date')" placeholder="Departure Date">
-                    </label>
-                    <label for="adults">
-                        <select class="booking_input" name="adults" id="adults" required>
-                            <option disabled selected>Adult</option>
-                            <option value="1">1 Adult</option>
-                            <option value="2">2 Adults</option>
-                            <option value="3">3 Adults</option>
-                            <option value="4">4 Adult</option>
-                            <option value="5+">5+ Adults</option>
-                        </select>
-                    </label>
-                    <label for="rooms">
-                        <select class="booking_input" name="rooms" id="rooms" required>
-                            <option selected disabled>Room</option>
-                            <option selected value="standard">Standard Room</option>
-                            <option value="double">Double Bedroom</option>
-                            <option value="four">Dorm 4</option>
-                            <option value="six">Dorm 6</option>
-                        </select>
-                    </label>
+                    <label class="sr-only" for="arrival_date">Arrival date</label>
+                    <input class="booking_input" id="arrival_date" name="arrival" type="text"
+                        placeholder="Arrival Date">
+                    <label class="sr-only" for="departure_date">Departure date</label>
+                    <input class="booking_input" id="departure_date" name="departure" type="text"
+                        placeholder="Departure Date">
+                    <label class="sr-only" for="adults">Quantity of adults</label>
+                    <select class="booking_input" name="adults" id="adults" required>
+                        <option disabled selected>Adult</option>
+                        <option value="1">1 Adult</option>
+                        <option value="2">2 Adults</option>
+                        <option value="3">3 Adults</option>
+                        <option value="4">4 Adult</option>
+                        <option value="5+">5+ Adults</option>
+                    </select>
+                    <label class="sr-only" for="rooms">Type of room</label>
+                    <select class="booking_input" name="rooms" id="rooms" required>
+                        <option selected disabled>Room</option>
+                        <option selected value="standard">Standard Room</option>
+                        <option value="double">Double Bedroom</option>
+                        <option value="four">Dorm 4</option>
+                        <option value="six">Dorm 6</option>
+                    </select>
                     <button class="booking_input" id="cta">Book a Room</button>
                 </form>
             </div>
