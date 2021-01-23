@@ -2,6 +2,48 @@
 .banner {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 60vh;
     background: url(/images/1920x1080.jpg) center center no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+
+    // @media (min-width: $large) {
+    //     height: 60vh;;
+    //   }
+}
+
+.booking-row {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    padding: 1em 2.5em;
+    background: rgba(0, 0, 0, .25);
+}
+
+#booking-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+   
+}
+.booking_input {
+    font-size: 0.8em;
+    border-radius: 8px;
+    padding:  0.3em 1em;
+    color: $grayishBlue;
+    font-size: 1em;
+    border: none;
+    text-align: center;
+}
+#cta {
+    background-color: #d90429;
+}
+h1 {
+    font-family: $fontHero;
+    font-size: 3em;
 }

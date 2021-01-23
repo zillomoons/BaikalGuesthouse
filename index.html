@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Potta+One&family=Raleway:wght@600&family=Roboto&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="scss/styles.css">
@@ -31,39 +32,49 @@
     </header>
 
     <main>
-        <section class="banner"></section>
-        <section>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque blanditiis praesentium maxime corporis
-                voluptas ex, fuga error tempora deserunt optio quia veniam in illum, sequi quaerat eaque deleniti
-                explicabo doloremque?
-                Ut blanditiis atque itaque, hic recusandae saepe mollitia harum doloremque. Neque unde ullam accusamus
-                tempore enim voluptas sint non inventore? Quisquam, magni reprehenderit. Eius in unde quos, commodi
-                dolores voluptatibus!
-                Omnis quod modi nobis id corrupti, harum quisquam. Tenetur, quae iste? Eligendi, omnis saepe? Totam
-                praesentium quis libero modi animi? Consequuntur tempora, nemo ducimus earum sed maiores quibusdam
-                facere molestias?
-                Ducimus dolores vel quam, debitis nulla fugiat optio quod, quibusdam veritatis, maiores error deserunt
-                voluptatibus itaque et! Accusamus excepturi assumenda modi minus distinctio at odit? Repellendus
-                voluptas sit necessitatibus incidunt!
-                Odit dolorum magni, aliquam hic saepe vitae repellat nihil alias maxime. Veniam repellat iure molestias
-                officiis voluptas sunt non voluptates minus eveniet? Nesciunt, dolore ex. Provident rerum iure sapiente
-                sit!
-                Delectus, et ipsum ex tempora sed rem culpa vitae dicta vel explicabo. Pariatur doloribus vero officiis
-                nulla eaque asperiores omnis perferendis fugiat possimus consequuntur? Corporis quibusdam animi
-                temporibus nulla quia!
-                Dolores nobis soluta totam recusandae corporis, minus nihil molestias illum necessitatibus magni,
-                facilis ratione quae, ipsam quas. Libero expedita, alias voluptate quo dolores repellendus sint
-                temporibus praesentium minus iusto inventore.
-                Consectetur soluta iure itaque. Distinctio cupiditate id corporis ullam qui voluptatibus enim voluptate,
-                rem libero eligendi cumque adipisci maxime at dolorum doloremque in possimus, reiciendis repellendus
-                fuga praesentium quibusdam ut!
-                Deleniti, repellat quam assumenda saepe non temporibus distinctio delectus libero, necessitatibus, sint
-                fuga aliquid tenetur. Dignissimos similique voluptatem ut alias. At iure repellendus non odit debitis
-                necessitatibus culpa totam doloremque.
-                Reiciendis cupiditate dolorem ex? Dolorem minima deserunt libero tempore maxime quasi itaque commodi
-                possimus ex voluptates. Doloribus, consequuntur. Atque exercitationem, omnis natus eum eius ratione? Sed
-                asperiores blanditiis natus nemo!</p>
+        <section class="banner">
+            <h1>Enjoy nature with family</h1>
+            <div class="booking-row">
+                <form action="/somewhere" id="booking-form">
+                    <label for="arrival_date">
+                        <input class="booking_input" id="arrival_date" name="arrival_date" type="text"
+                            onfocus="(this.type='date')" placeholder="Arrival Date">
+                    </label>
+                    <label for="departure_date">
+                        <input class="booking_input" id="departure_date" name="departure_date" type="text"
+                            onfocus="(this.type='date')" placeholder="Departure Date">
+                    </label>
+                    <label for="adults">
+                        <select class="booking_input" name="adults" id="adults" required>
+                            <option disabled selected>Adult</option>
+                            <option value="1">1 Adult</option>
+                            <option value="2">2 Adults</option>
+                            <option value="3">3 Adults</option>
+                            <option value="4">4 Adult</option>
+                            <option value="5+">5+ Adults</option>
+                        </select>
+                    </label>
+                    <label for="rooms">
+                        <select class="booking_input" name="rooms" id="rooms" required>
+                            <option selected disabled>Room</option>
+                            <option selected value="standard">Standard Room</option>
+                            <option value="double">Double Bedroom</option>
+                            <option value="four">Dorm 4</option>
+                            <option value="six">Dorm 6</option>
+                        </select>
+                    </label>
+                    <button class="booking_input" id="cta">Book a Room</button>
+                </form>
+            </div>
         </section>
+        <section class="Rooms">
+            <!-- Carousel slider with rooms(flip cards) -->
+        </section>
+        <section class="features">
+            <!-- transfer/tours/hot tab/leisure activites -->
+        </section>
+        <section class="testimonials"></section>
+
     </main>
     <script src="app.js"></script>
 </body>
