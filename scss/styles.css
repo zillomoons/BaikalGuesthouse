@@ -7,9 +7,13 @@
 }
 
 body {
-  background: #fafafa;
+  background: #f3f4f6;
   min-height: 200vh;
   color: #2d314d;
+}
+
+body.noscroll {
+  overflow: hidden;
 }
 
 .sr-only {
@@ -90,6 +94,7 @@ header .logo:hover {
 
 .menu_container.open {
   width: 100%;
+  top: 0%;
   visibility: visible;
   opacity: 1;
   -webkit-transition: visibility 0s linear 0s, opacity 300ms;
@@ -103,8 +108,8 @@ header .logo:hover {
     top: 3%;
     visibility: visible;
     opacity: 1;
-    -webkit-transition: visibility 0s;
-    transition: visibility 0s;
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
   }
 }
 
@@ -365,8 +370,8 @@ option {
 }
 
 #cta {
-  background-color: #d90429;
-  border: #d90429;
+  background: #d90429;
+  border: 1px solid #d90429;
   text-align: center;
   border: none;
   -webkit-transition: 0.3s ease-in-out;
@@ -374,7 +379,7 @@ option {
 }
 
 #cta:hover {
-  background-color: #c00a28;
+  background: rgba(217, 4, 41, 0.7);
 }
 
 h1 {

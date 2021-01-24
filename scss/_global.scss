@@ -5,10 +5,13 @@
     font-family: $fontBody;
 }
 body {
-    background: $veryLightGray;
+    background: $lightGrayishBlue;
     min-height: 200vh;
     color: $darkBlue;
-    
+
+    &.noscroll {
+        overflow: hidden;
+    }  
 }
 
 .sr-only {
