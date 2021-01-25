@@ -41,7 +41,7 @@ function stickyHeader() {
 // Removes sr-only on menuList for desktop
 // function removeSR_Only() {
 //     if (visualViewport.width > 1024) {
-//         menuList.classList.toggle('sr-only');
+//         menuList.classList.toggle('sr-only');  // NOT TOGGLE BUT REMOVE WHEN WIDTH 1024PX
 //     }
 // }
 //If viewport for desktop remove sr-only

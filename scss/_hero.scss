@@ -84,14 +84,14 @@ option {
 }
 
 #cta {
-    background: #d90429;
-    border:  1px solid #d90429;
+    background: #d90427dc;
     text-align: center;
     border: none;
+    box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.5);
     transition: 0.3s ease-in-out;
 
     &:hover {
-        background: rgba(217, 4, 41, 0.7);
+        background: #d90427;
     }
 }
 h1 {
