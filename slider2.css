@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.carousel_container {
+    width: 100%;
+    height: 100%;
+    margin: 2em auto 1em;
+    overflow: hidden;
+    position: relative;
+}
+.carousel_track {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin: 20px 5px 20px 5px;
+    
+}
+.carousel_box {
+    width: 100%;
+    height: 100%;
+    background-color: $veryLightGray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 7px;
+    transition: 0.3s ease-in-out;
+
+    &:hover{
+        opacity: 0.7;
+        transform: translateY(-10px);
+
+    }
+    
+}
+.carousel__photo {
+    max-height: 250px;
+    overflow: hidden;
+    width: 100%;
+    min-width: 278px;
+}
+.details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    padding: 1em; 
+    gap: 0.32em;
+}
+.details h3{
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    font-family: $fontTitle;
+    font-size: 1.25em;
+}
+.details p {
+    color: $grayishBlue;  
+    font-size: 1em;
+}
+
+.buttons_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.carousel_buttons {
+    display: flex;
+    justify-content: center;
+    color: #d4af37;
+    font-weight: bold;
+    width: 45px;
+    font-size: 25px;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.7;
+    }
+    
+}

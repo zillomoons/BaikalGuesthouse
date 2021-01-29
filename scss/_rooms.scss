@@ -1,24 +1,26 @@
 .rooms {
     width: 100vw;
     height: 100vh;
-
     display: flex;
     flex-flow: column;
 }
 h2{
     font-family: $fontHero;
     text-align: center;
-    font-size: 28px;
+    font-size: 48px;
+    margin-top: 50px;
 }
 .slider_container {
     flex: 1;
-    overflow: scroll;
+    justify-content: center;
+    //overflow: scroll;
 
     .slider {
         position: relative;
         overflow: hidden;
-        height: 100%;
-        width: 100%;
+        height: 60%;
+        width: 80%;
+        margin: 70px auto 0;
 
         &__slide {
             position: absolute;
@@ -32,9 +34,36 @@ h2{
             background-position: center center;
             background-size: cover;
 
+            .slider__content {
+                position: absolute;
+                width: 100%;
+                max-width: 600px;
+                top: 0;
+                padding: 15px;
+                box-sizing: border-box;
+                background: rgba(0, 0, 0, 0.4);
+                transition: transform 0.2s linear 0.5s;
+                transform: translateX(-100%);
+                color: #f3f3f3;
+
+                @media (min-width: 600px) {
+                  border-radius: 0px 0px 50px 0px;                      
+                }
+
+                .slider__title {
+                    span {
+                        display: block;
+                        font-weight: 300;
+                    }
+                }
+            }
             &.active {
                 opacity: 1;
                 transform: translateY(0%);
+
+                .slider__content {
+                    transform: translateX(0%);
+                }
             }
         }
         &__btns {
@@ -59,13 +88,13 @@ h2{
             color: $darkBlue;
             font-weight: 300;
             border-radius: 50%;
-            background: none;
+            background: $veryLightGray;
             border: 1px solid $darkBlue;
             cursor: pointer;
             transition: background 0.2s linear, color 0.2s ease-out;
 
             &:hover {
-                background: $grayishBlue;
+                background: #ccc8c8;
                 color: #171717;
             }
         }
@@ -73,111 +102,3 @@ h2{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// .carousel_container {
-//     width: 80%;
-//     height: 100%;
-//     margin: 3em auto;
-//     overflow: hidden;
-//     position: relative;
-// }
-// .carousel_track {
-//     display: flex;
-//     align-items: center;
-//     gap: 1em;
-//     margin: 20px 5px 20px 5px;
-    
-// }
-// .carousel_box {
-//     min-width: 250px;
-//     height: 420px;
-//     background-color: $veryLightGray;
-//     border-radius: 10px;
-//     box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.5);
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     justify-content: space-between;
-//     margin-left: 7px;
-    
-
-//     &.initial{
-
-//     }
-    
-// }
-// .carousel__photo {
-//     width: 350px;
-//     min-height: 50%;
-//     max-width: 100%;
-//     border-top-left-radius: 10px;
-//     border-top-right-radius: 10px; 
-    
-// }
-// .details {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: space-evenly;
-//     align-items: center;
-//     width: 100%;
-//     padding: 1em; 
-//     gap: 0.32em;
-// }
-// .details h3{
-//     font-weight: 600;
-//     letter-spacing: 1.5px;
-//     font-family: $fontTitle;
-//     font-size: 1.25em;
-// }
-// .details p {
-//     color: $grayishBlue;  
-//     font-size: 1em;
-// }
-
-// .carousel_buttons {
-//     color: $white;
-//     font-weight: bold;
-//     height: 45px;
-//     width: 45px;
-//     font-size: 25px;
-//     text-align: center;
-//     background-color: $limeGreen;
-//     border-radius: 50px;
-//     cursor: pointer;
-
-//     top: 0;
-//     z-index: 3;
-// }
-// .btn-next {
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     position: absolute;
-//     right: 0%;
-//     top: 50%;
-// }
-// .btn-prev {
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     position: absolute;
-//     left: 0%;
-//     top: 50%;
-// }

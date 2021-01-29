@@ -227,7 +227,7 @@ header .logo:hover {
   position: relative;
   width: 100%;
   height: 80vh;
-  background: url(/images/1920x1080.jpg) center center no-repeat;
+  background: url(/images/baikal/1920x1080.jpg) center center no-repeat;
   color: #ffffff;
 }
 
@@ -413,21 +413,25 @@ h1 {
 h2 {
   font-family: "Pacifico", cursive;
   text-align: center;
-  font-size: 28px;
+  font-size: 48px;
+  margin-top: 50px;
 }
 
 .slider_container {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  overflow: scroll;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .slider_container .slider {
   position: relative;
   overflow: hidden;
-  height: 100%;
-  width: 100%;
+  height: 60%;
+  width: 80%;
+  margin: 70px auto 0;
 }
 
 .slider_container .slider__slide {
@@ -447,10 +451,44 @@ h2 {
   background-size: cover;
 }
 
+.slider_container .slider__slide .slider__content {
+  position: absolute;
+  width: 100%;
+  max-width: 600px;
+  top: 0;
+  padding: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.4);
+  -webkit-transition: -webkit-transform 0.2s linear 0.5s;
+  transition: -webkit-transform 0.2s linear 0.5s;
+  transition: transform 0.2s linear 0.5s;
+  transition: transform 0.2s linear 0.5s, -webkit-transform 0.2s linear 0.5s;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  color: #f3f3f3;
+}
+
+@media (min-width: 600px) {
+  .slider_container .slider__slide .slider__content {
+    border-radius: 0px 0px 50px 0px;
+  }
+}
+
+.slider_container .slider__slide .slider__content .slider__title span {
+  display: block;
+  font-weight: 300;
+}
+
 .slider_container .slider__slide.active {
   opacity: 1;
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
+}
+
+.slider_container .slider__slide.active .slider__content {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
 }
 
 .slider_container .slider__btns {
@@ -480,7 +518,7 @@ h2 {
   color: #2d314d;
   font-weight: 300;
   border-radius: 50%;
-  background: none;
+  background: #fafafa;
   border: 1px solid #2d314d;
   cursor: pointer;
   -webkit-transition: background 0.2s linear, color 0.2s ease-out;
@@ -488,7 +526,7 @@ h2 {
 }
 
 .slider_container .slider .slider__btn:hover {
-  background: #9698a6;
+  background: #ccc8c8;
   color: #171717;
 }
 /*# sourceMappingURL=styles.css.map */
