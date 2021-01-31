@@ -1,6 +1,5 @@
 const menuBtn = document.getElementById('toggleBtn');
 const menuOverlay = document.querySelector('.menu_container');
-//const menuList = document.querySelector('#menuList')
 const body = document.querySelector('body');
 const header = document.querySelector('header');
 
@@ -47,6 +46,9 @@ function stickyHeader() {
 //If viewport for desktop remove sr-only
 //window.addEventListener('resize', removeSR_Only)
 
+
+
+//ROOM Section
 const next_btn = document.querySelector('#btn_next');
 const prev_btn = document.querySelector('#btn_prev');
 const slider = document.querySelector('.slider');
@@ -144,4 +146,80 @@ prev_btn.addEventListener('click', () => {
 })
 
 
-//
+const roomDescrip = document.querySelectorAll('.slider__descrip');
+const roomTitles = document.querySelectorAll('slider__title');
+
+const showRoomDescr = () => {
+    roomDescrip.forEach(descrip => {
+        descrip.classList.toggle('visible');
+
+    })
+};
+document.querySelectorAll('.slider__title').forEach(title => {
+    title.addEventListener('click', showRoomDescr);
+})
+
+
+
+const hiddenElems = document.getElementsByClassName('hidden');
+const windowHeight = window.innerHeight;
+
+const scrollAppear = () => { 
+    for (let i = 0; i < hiddenElems.length; i++) {
+        let posFromTop = hiddenElems[i].getBoundingClientRect().top;
+        if (posFromTop < (windowHeight / 1.5)) {
+            hiddenElems[i].classList.add('fade-in');
+        }
+    }
+}
+window.addEventListener('scroll', scrollAppear);
+// const animateHTML = () => {
+//     const elems,
+//         windowHeight
+    
+//     var init = function() {
+//       elems = document.getElementsByClassName("hidden");
+//       windowHeight = window.innerHeight;
+//       _addEventHandlers();
+//     }
+    
+//     var _addEventHandlers = function() {
+//         window.addEventListener("scroll", _checkPosition);
+//         window.addEventListener("resize", init)
+//     }
+//     var _checkPosition = function() {
+//       for ( var i = 0; i < elems.length; i++ ) {
+//         var posFromTop = elems[i].getBoundingClientRect().top;
+//         if ( posFromTop - windowHeight <= 0) { 
+//           elems[i].className = elems[i].className.replace( "hidden", "fade-in" );
+//         }
+//       }    
+//     }
+    
+//     return {
+//       init: init
+//     }
+//   }
+  
+//   animateHTML().init();
+  /* function getElemsHeight() {
+      elemsHeight = [];
+      for ( var i = 0; i < elems.length; i++ ) {
+      elemsHeight.push(elems[i].getBoundingClientRect().top - windowHeight)
+    }
+  }
+  getElemsHeight();
+  
+  window.onscroll = function() {
+    for ( var j = 0; j < elems.length; j++ ) {
+      //console.log("offset " + window.pageYOffset + " elemsHeight " + elemsHeight[j])
+      if ( window.pageYOffset > elems[j].getBoundingClientRect().top ) {
+        
+         elems[j].className = elems[j].className.replace( "hidden", "fade-in" );
+         getElemsHeight();
+        
+      }
+    }
+  }; */
+  
+  

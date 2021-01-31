@@ -1,26 +1,47 @@
 .rooms {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media (min-width: $large) {
+        flex-direction: row;
+    }
+}
+.intro-text{
+    padding: 25px; 
+    
+    h2{
+        font-family: $fontHero;
+        text-align: center;
+        font-size: 1.75em;
+        margin-bottom: 15px;
+    
+        @media (min-width: $medium) {
+            font-size: 2.75em;
+        }
+    }
+    p {
+        margin: 0 50px;
+        line-height: 1.7;
+        font-size: $font-med;
+        font-family: $fontHero;
+    }
+} 
+
+.slider_container {
     width: 100vw;
     height: 100vh;
-    display: flex;
-    flex-flow: column;
-}
-h2{
-    font-family: $fontHero;
-    text-align: center;
-    font-size: 48px;
-    margin-top: 50px;
-}
-.slider_container {
-    flex: 1;
-    justify-content: center;
-    //overflow: scroll;
-
+    
     .slider {
         position: relative;
         overflow: hidden;
-        height: 60%;
-        width: 80%;
-        margin: 70px auto 0;
+        max-width: 900px;
+        top: 10%;
+        right: 0%;
+        height: 80%;
+        width: 85%;
+        margin: 1.5em auto;
 
         &__slide {
             position: absolute;
@@ -37,7 +58,6 @@ h2{
             .slider__content {
                 position: absolute;
                 width: 100%;
-                max-width: 600px;
                 top: 0;
                 padding: 15px;
                 box-sizing: border-box;
@@ -45,15 +65,24 @@ h2{
                 transition: transform 0.2s linear 0.5s;
                 transform: translateX(-100%);
                 color: #f3f3f3;
-
-                @media (min-width: 600px) {
-                  border-radius: 0px 0px 50px 0px;                      
-                }
+                border-radius: 0px 0px 50px 0px; 
 
                 .slider__title {
-                    span {
-                        display: block;
-                        font-weight: 300;
+                    font-size: 1em;
+                    font-family: $fontTitle;
+                    margin-bottom: 10px;
+
+                    @media (min-width: $medium) {
+                        font-size: 1.25em;                 
+                    }
+                }
+                .slider__descrip {
+                    font-size: $font-sm;
+                    line-height: 1.45;
+
+                    @media (min-width: $medium) {
+                        font-size: 1em;  
+                        line-height: 1.25;                   
                     }
                 }
             }
@@ -101,4 +130,4 @@ h2{
     }
 }
 
-
+//transition: opacity 1.3s cubic-bezier(0.24,0.48,0.68,1),transform 1s cubic-bezier(0.24,0.48,0.68,1);
