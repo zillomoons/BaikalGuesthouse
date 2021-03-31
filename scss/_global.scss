@@ -34,3 +34,22 @@ body {
     opacity: 1;
     transform: translateY(0px);
 }
+.main-container{
+    width: 1200px;
+    margin: 0 auto;
+}
+@media (max-width: 1200px){
+    .main-container {
+        width: 95%;
+    }
+} 
+.s1 {
+    background-color: #eaeaea;
+    border-bottom: 1px solid #c1c1c1;
+    overflow: hidden
+}
+.s2{
+    background-color: #fff;
+    border-bottom: 1px solid #c1c1c1;
+    overflow: hidden;
+}

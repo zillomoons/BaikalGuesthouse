@@ -1,4 +1,5 @@
-.rooms {
+.rooms-wrapper {
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,9 +30,10 @@
     }
 } 
 
+
 .slider_container {
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
     
     .slider {
         position: relative;
@@ -48,7 +50,7 @@
             transform: translateY(-100%);
             left: 0;
             width: 100%;
-            height: 100%;
+            height: 75%;
             overflow: hidden;
             opacity: 0;
             transition: transform 0.5s ease-in-out, opacity 0.5s linear;
@@ -70,19 +72,20 @@
                 .slider__title {
                     font-size: 1em;
                     font-family: $fontTitle;
-                    margin-bottom: 10px;
+                    margin: 10px;
 
                     @media (min-width: $medium) {
                         font-size: 1.25em;                 
                     }
                 }
                 .slider__descrip {
-                    font-size: $font-sm;
-                    line-height: 1.45;
+                    font-size: 16px;
+                    line-height: 1.45em;
+
 
                     @media (min-width: $medium) {
-                        font-size: 1em;  
-                        line-height: 1.25;                   
+                        font-size: 14px;  
+                        line-height: 1.45;                   
                     }
                 }
             }

@@ -56,36 +56,28 @@ let first_slide;
 let last_slide;
 
 let rooms = [
+    
     {
         title: 'Room 1',
-        content: 'As our smallest budget rooms, the Compact bedrooms are suited for single occupancy or short-stay double occupancy as they have limited space and storage.',
-        image: '/images/rooms/room1.jpg'
-    },
-    {
-        title: 'Room 2',
         content: 'As our smallest budget rooms, the Compact bedrooms are suited for single occupancy or short-stay double occupancy as they have limited space and storage.',
         image: '/images/rooms/room2.jpg'
     },
     {
-        title: 'Room 3',
+        title: 'Room 2',
         content: 'As our smallest budget rooms, the Compact bedrooms are suited for single occupancy or short-stay double occupancy as they have limited space and storage.',
         image: '/images/rooms/room3.jpg'
     },
     {
-        title: 'Room 4',
+        title: 'Room 3',
         content: 'As our smallest budget rooms, the Compact bedrooms are suited for single occupancy or short-stay double occupancy as they have limited space and storage.',
         image: '/images/rooms/room4.jpg'
     },
     {
-        title: 'Room 5',
+        title: 'Room 4',
         content: 'As our smallest budget rooms, the Compact bedrooms are suited for single occupancy or short-stay double occupancy as they have limited space and storage.',
         image: '/images/rooms/room5.jpg'
-    },
-    {
-        title: 'Room 6',
-        content: 'As our smallest budget rooms, the Compact bedrooms are suited for single occupancy or short-stay double occupancy as they have limited space and storage.',
-        image: '/images/rooms/room6.jpg'
     }
+
 ]
 
 rooms.forEach(({ title, content, image }, i) => {
