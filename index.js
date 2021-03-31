@@ -1,3 +1,6 @@
+import './scss/styles.scss'
+// import images from './images/rooms/*.jpg'
+
 const menuBtn = document.getElementById('toggleBtn');
 const menuOverlay = document.querySelector('.menu_container');
 const body = document.querySelector('body');
@@ -37,16 +40,6 @@ function stickyHeader() {
     header.classList.toggle('sticky', window.scrollY > 0);
 }
 
-// Removes sr-only on menuList for desktop
-// function removeSR_Only() {
-//     if (visualViewport.width > 1024) {
-//         menuList.classList.toggle('sr-only');  // NOT TOGGLE BUT REMOVE WHEN WIDTH 1024PX
-//     }
-// }
-//If viewport for desktop remove sr-only
-//window.addEventListener('resize', removeSR_Only)
-
-
 
 //ROOM Section
 const next_btn = document.querySelector('#btn_next');
@@ -56,26 +49,26 @@ let first_slide;
 let last_slide;
 
 let rooms = [
-    
+
     {
         title: 'Room 1',
         content: 'As our smallest budget rooms, the Compact bedrooms are suited for single occupancy or short-stay double occupancy as they have limited space and storage.',
-        image: '/images/rooms/room2.jpg'
+        image: require('/images/rooms/room2.jpg')
     },
     {
         title: 'Room 2',
         content: 'As our smallest budget rooms, the Compact bedrooms are suited for single occupancy or short-stay double occupancy as they have limited space and storage.',
-        image: '/images/rooms/room3.jpg'
+        image: require('/images/rooms/room3.jpg')
     },
     {
         title: 'Room 3',
         content: 'As our smallest budget rooms, the Compact bedrooms are suited for single occupancy or short-stay double occupancy as they have limited space and storage.',
-        image: '/images/rooms/room4.jpg'
+        image: require('/images/rooms/room4.jpg')
     },
     {
         title: 'Room 4',
         content: 'As our smallest budget rooms, the Compact bedrooms are suited for single occupancy or short-stay double occupancy as they have limited space and storage.',
-        image: '/images/rooms/room5.jpg'
+        image: require('/images/rooms/room5.jpg')
     }
 
 ]
@@ -156,7 +149,7 @@ document.querySelectorAll('.slider__title').forEach(title => {
 const hiddenElems = document.getElementsByClassName('hidden');
 const windowHeight = window.innerHeight;
 
-const scrollAppear = () => { 
+const scrollAppear = () => {
     for (let i = 0; i < hiddenElems.length; i++) {
         let posFromTop = hiddenElems[i].getBoundingClientRect().top;
         if (posFromTop < (windowHeight / 1.5)) {
@@ -165,53 +158,4 @@ const scrollAppear = () => {
     }
 }
 window.addEventListener('scroll', scrollAppear);
-// const animateHTML = () => {
-//     const elems,
-//         windowHeight
-    
-//     var init = function() {
-//       elems = document.getElementsByClassName("hidden");
-//       windowHeight = window.innerHeight;
-//       _addEventHandlers();
-//     }
-    
-//     var _addEventHandlers = function() {
-//         window.addEventListener("scroll", _checkPosition);
-//         window.addEventListener("resize", init)
-//     }
-//     var _checkPosition = function() {
-//       for ( var i = 0; i < elems.length; i++ ) {
-//         var posFromTop = elems[i].getBoundingClientRect().top;
-//         if ( posFromTop - windowHeight <= 0) { 
-//           elems[i].className = elems[i].className.replace( "hidden", "fade-in" );
-//         }
-//       }    
-//     }
-    
-//     return {
-//       init: init
-//     }
-//   }
-  
-//   animateHTML().init();
-  /* function getElemsHeight() {
-      elemsHeight = [];
-      for ( var i = 0; i < elems.length; i++ ) {
-      elemsHeight.push(elems[i].getBoundingClientRect().top - windowHeight)
-    }
-  }
-  getElemsHeight();
-  
-  window.onscroll = function() {
-    for ( var j = 0; j < elems.length; j++ ) {
-      //console.log("offset " + window.pageYOffset + " elemsHeight " + elemsHeight[j])
-      if ( window.pageYOffset > elems[j].getBoundingClientRect().top ) {
-        
-         elems[j].className = elems[j].className.replace( "hidden", "fade-in" );
-         getElemsHeight();
-        
-      }
-    }
-  }; */
-  
-  
+
