@@ -1,0 +1,20 @@
+{
+  "name": "BaikalGuesthouse",
+  "version": "1.0.0",
+  "description": "This is static website for guesthouse. Only native JavaScript and Sass preprocessors.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zillomoons/BaikalGuesthouse.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zillomoons/BaikalGuesthouse/issues"
+  },
+  "homepage": "https://github.com/zillomoons/BaikalGuesthouse#readme"
+}
