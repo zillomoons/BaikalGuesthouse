@@ -1,5 +1,5 @@
 import './scss/styles.scss'
-// import images from './images/rooms/*.jpg'
+
 
 const menuBtn = document.getElementById('toggleBtn');
 const menuOverlay = document.querySelector('.menu_container');
